@@ -1,0 +1,18 @@
+struct ListNode *createlist()
+{
+  struct ListNode *tail = NULL;
+  struct ListNode *p = NULL;
+  int a;
+  
+  scanf("%d",&a);
+  
+  while(a!=-1)
+  {
+    p = (struct ListNode *)malloc(sizeof(struct ListNode));
+    p->next = tail;
+    tail = p;
+    tail->data = a;
+    scanf("%d",&a);
+  }
+  return tail;
+}
